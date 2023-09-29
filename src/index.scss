@@ -1,0 +1,73 @@
+$background-color: #121212;
+$primary-color: #2D4059;
+$secondary-color: #EEEEEE;
+$accent-color: #FF5722;
+
+$border-radius-sm: 0.5rem;
+$border-radius-md: 1rem;
+$border-radius-lg: 2rem;
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Quicksand", sans-serif;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #333;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 500;
+  color: #333;
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #333;
+}
+
+h4 {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #333;
+}
+
+body {
+  background: $background-color;
+}
+
+button,
+.router-button,
+Link {
+  background: $primary-color;
+  color: white;
+  border: none;
+  padding: 0.5rem 1.5rem;
+  border-radius: $border-radius-sm;
+  text-transform: uppercase;
+  transition: 150ms ease-in-out all;
+  filter: saturate(50%);
+
+  &:hover {
+    cursor: pointer;
+    background: saturate($primary-color, 10%);
+    transition: 150ms ease-in-out all;
+    filter: saturate(100%);
+  }
+
+  &.play {
+    background: $accent-color;
+
+    &:hover {
+      cursor: pointer;
+      background: saturate($accent-color, 10%);
+      transition: 150ms ease-in-out all;
+      filter: saturate(100%);
+    }
+  }
+}
