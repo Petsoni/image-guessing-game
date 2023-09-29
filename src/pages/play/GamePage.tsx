@@ -1,11 +1,10 @@
 import {useEffect, useState} from "react";
 import {getRandomImage} from "../../api/image-service.ts";
 import {TResponseImage} from "../../models/ResponseImage.ts";
-import {unmountComponentAtNode} from "react-dom";
 
 const GamePage = () => {
 
-    const [image, setImage] = useState<TResponseImage | null>({});
+    const [image, setImage] = useState<TResponseImage | null>(null);
 
     useEffect(() => {
         let ignore = false;
